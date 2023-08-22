@@ -6,18 +6,18 @@ def contentEntity(content: dict) -> dict:
         dict: get field database
     """
     return {
-        "id": content["id"],
-        "user_id": content["user_id"],
-        "username": content["username"],
-        "title": content["title"],
-        "like": content["like"],
-        "comment": content["comment"],
-        "status": content["status"],
-        "ingridient": content["ingridient"],
-        "status": content["status"],
-        "intructions": content["intructions"],
-        "created_at": content["created_at"],
-        "updated_at": content["updated_at"],
+        "id": content.id,
+        "user_id": content.user_id,
+        "username": content.username,
+        "title": content.title,
+        "like": content.like,
+        "comment": content.comment,
+        "status": content.status,
+        "ingridient": content.ingridient,
+        "status": content.status,
+        "intructions": content.intructions,
+        "created_at": content.created_at,
+        "updated_at": content.updated_at,
     }
 
 

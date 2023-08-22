@@ -1,11 +1,8 @@
 
 
-from datetime import date
-from typing import Optional
-from sqlalchemy import Enum, table, Column, DateTime
-from sqlmodel import SQLModel, Field, Relationship
+from sqlalchemy import Enum, Column
 from app.database import Base
-from sqlalchemy.types import String, Integer
+from sqlalchemy.types import String
 
 
 class Sex(str, Enum):

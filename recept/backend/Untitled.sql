@@ -20,17 +20,20 @@ CREATE INDEX idx_person_id ON "person" ("id");
 CREATE TABLE IF NOT EXISTS "receipt" (
   "id" varchar PRIMARY KEY,
   "user_id" varchar,
+  "username" varchar,
   "title" varchar,
-  "body" text,
-  "like" int,
+  "ingridient" text,
+  "intructions" text,
+  "notes" text,
+  "like" bigint,
   "comment" varchar,
   "status" varchar,
-  "created_at" timestamp
+  "created_at" bigint,
+  "updated_at" bigint
 );
 CREATE INDEX idx_receipt_id ON "receipt" ("id");
 CREATE INDEX idx_receipt_title ON "receipt" ("title");
 
-COMMENT ON COLUMN "receipt"."body" IS 'Content of the post';
 
 ALTER TABLE "receipt" ADD FOREIGN KEY ("user_id") REFERENCES "users" ("id");
 ALTER TABLE "users" ADD FOREIGN KEY ("person_id") REFERENCES "person" ("id");

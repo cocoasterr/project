@@ -5,7 +5,7 @@ from app.config import settings
 from app.repository.personRepository import personRepo
 from app.repository.userRepository import userRepo
 from app.serializers.userSerializers import userEntity, userResponseEntity
-from app.serializers.personSerializers import getMepersonEntity
+from app.serializers.personSerializers import getMePersonEntity
 from app.utils.general import exception_message, general_response, hash_password, verify_password
 from app.models.users import Users
 from app.models.person import Person
@@ -136,7 +136,7 @@ async def getMe(user_id):
         person = await personRepo.getById(user.person_id, tb_person)
         
         data_res = userResponseEntity(user)
-        data_res.update(getMepersonEntity(person))
+        data_res.update(getMePersonEntity(person))
 
         return await general_response("success", [data_res])
     except Exception as e:

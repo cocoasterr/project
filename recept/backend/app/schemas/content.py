@@ -22,7 +22,7 @@ class ContentBaseSchema(BaseModel):
         schema_extra = {
             "example": {
                 "title": "Resep Burger Sederhana",
-                "ingredient": [
+                "ingridient": '''
                 "200 gram daging sapi cincang",
                 "1 buah roti burger",
                 "2 lembar daun selada",
@@ -33,8 +33,8 @@ class ContentBaseSchema(BaseModel):
                 "1 sendok makan saus mayones",
                 "Garam dan merica secukupnya",
                 "Minyak sayur untuk menggoreng"
-                ],
-                "instructions": [
+                ''',
+                "intructions": '''
                 "Bentuk daging cincang menjadi patty dengan diameter yang sesuai dengan ukuran roti burger.",
                 "Panaskan wajan atau grill pan dengan sedikit minyak. Panggang patty daging hingga matang dan berkulit kecokelatan di kedua sisinya. Beri garam dan merica saat memasak.",
                 "Potong roti burger menjadi dua bagian. Panggang bagian dalam roti di wajan hingga agak renyah.",
@@ -44,10 +44,10 @@ class ContentBaseSchema(BaseModel):
                 "Tutup burger dengan bagian roti yang berisi saus mayones.",
                 "Panaskan sedikit minyak sayur dalam wajan. Panggang burger sebentar hingga keju meleleh dan roti luar menjadi renyah.",
                 "Angkat burger dan sajikan hangat."
-                ],
+                ''',
                 "notes": "Anda dapat menyesuaikan tambahan isian seperti saus sambal, acar, atau sayuran lain sesuai selera.",
                 "comment": "Delicious and simple!",
-                "likes": 850,
+                "like": 850,
                 "status": "public"
             }
         }
@@ -80,7 +80,7 @@ class ContentUpdateSchema(BaseModel):
         schema_extra = {
             "example": {
                 "title": "Resep Burger Daging Ayam",
-                "ingredient": [
+                "ingridient": '''
                 "250 gram daging ayam cincang",
                 "1 buah roti burger",
                 "2 lembar daun selada",
@@ -91,8 +91,8 @@ class ContentUpdateSchema(BaseModel):
                 "1 sendok makan saus mayones",
                 "Garam, merica, dan rempah ayam secukupnya",
                 "Minyak sayur untuk menggoreng"
-                ],
-                "instructions": [
+                ''',
+                "intructions": '''
                 "Bentuk daging ayam cincang menjadi patty dengan diameter yang sesuai dengan ukuran roti burger.",
                 "Taburi patty ayam dengan garam, merica, dan rempah ayam. Panaskan sedikit minyak di wajan. Panggang patty ayam hingga matang dan berkulit kecokelatan di kedua sisinya.",
                 "Potong roti burger menjadi dua bagian. Panggang bagian dalam roti di wajan hingga agak renyah.",
@@ -102,7 +102,7 @@ class ContentUpdateSchema(BaseModel):
                 "Tutup burger dengan bagian roti yang berisi saus mayones.",
                 "Panaskan sedikit minyak sayur dalam wajan. Panggang burger sebentar hingga keju meleleh dan roti luar menjadi renyah.",
                 "Angkat burger dan sajikan hangat."
-                ],
+                ''',
                 "notes": "Anda dapat menyesuaikan tambahan isian seperti saus sambal, acar, atau sayuran lain sesuai selera.",
                 "comment": "Flavorful chicken burger!",
                 "status": "public"

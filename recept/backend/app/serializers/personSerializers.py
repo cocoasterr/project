@@ -6,14 +6,14 @@ def personEntity(person: dict) -> dict:
         dict: get field database
     """
     return {
-        "id": person["id"],
-        "name": person["name"],
-        "birth": person["birth"],
-        "sex": person["sex"],
-        "profile": person["profile"],
-        "phone_number": person["phone_number"],
+        "id": person.id,
+        "name": person.name,
+        "birth": person.birth,
+        "sex": person.sex,
+        "profile": person.profile,
+        "phone_number": person.phone_number,
     }
-def getMepersonEntity(person: dict) -> dict:
+def getMePersonEntity(person: dict) -> dict:
     """maping value from database
     Args:
         person (dict): entity schema
@@ -21,12 +21,12 @@ def getMepersonEntity(person: dict) -> dict:
         dict: get field database
     """
     return {
-        "person_id": person["id"],
-        "name": person["name"],
-        "birth": person["birth"],
-        "sex": person["sex"],
-        "profile": person["profile"],
-        "phone_number": person["phone_number"],
+        "person_id": person.id,
+        "name": person.name,
+        "birth": person.birth,
+        "sex": person.sex,
+        "profile": person.profile,
+        "phone_number": person.phone_number,
     }
 
 

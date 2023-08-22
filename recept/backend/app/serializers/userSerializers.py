@@ -34,9 +34,9 @@ def userResponseEntity(user: dict) -> dict:
         dict: field database
     """
     return {
-        "id": user['id'],
-        "username": user['username'],
-        "email": user['email'],
+        "id": user.id,
+        "username": user.username,
+        "email": user.email,
     }
 
     # name: str

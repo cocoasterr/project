@@ -8,8 +8,9 @@ from app.utils.general import exception_message, general_response, general_searc
 
 
 async def general_index(collection_db:Collection, repo:Type, entity: dict, 
-                        searchByTitle:str ,page:int, limit:int):
+                        searchByTitle:str="" ,page:int = 0, limit:int = 0):
     table_name = collection_db.__tablename__
+    search = ""
     if searchByTitle:
         searchTitle = {"filter[title]" : searchByTitle}
         search = general_search(searchTitle)
@@ -71,7 +72,7 @@ async def general_create(collection_db:Type, repo:Type, user_id:str,
             if is_user:
                 tb_name = user_db.__tablename__
                 user = await repo.getById(user_id, tb_name)
-                payload.username = user['username']
+                payload.username = user.username
                 payload.user_id = user_id
             payload.id = _create_id
             payload.created_at = dt_now_mills

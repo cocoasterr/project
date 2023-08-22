@@ -1,11 +1,9 @@
 
 
-from typing import List, Optional
 from sqlalchemy import Column, String
-from sqlmodel import SQLModel, Field, Relationship
 
 from app.database import Base
-from sqlalchemy.types import String, Integer
+from sqlalchemy.types import String
 
 
 class Users(Base):
