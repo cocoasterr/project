@@ -4,7 +4,7 @@ from fastapi import HTTPException, status
 from app.config import settings
 from app.repository.personRepository import personRepo
 from app.repository.userRepository import userRepo
-from app.serializers.userSerializers import userEntity, userResponseEntity
+from app.serializers.userSerializers import userEntity, userResponseEntity, getMeResponseEntity
 from app.serializers.personSerializers import getMePersonEntity
 from app.utils.general import exception_message, general_response, hash_password, verify_password
 from app.models.users import Users
@@ -50,7 +50,7 @@ async def register(payload, session):
 
         await userRepo.create(session, **user)
 
-        data_res = userResponseEntity(user)
+        data_res = getMeResponseEntity(user)
 
         return await general_response("success", [data_res])
 
